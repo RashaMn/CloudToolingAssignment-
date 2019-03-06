@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - 'stable'
+install:
+  - npm install
+script:
+  - tslint -c tslint.json 'src/**/*.ts'
+
+
+
+after_success: 
+- bash <(curl -s https://codecov.io/bash)
